@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+html,
+body {
+  background-color: gray;
+  color-scheme: light dark;
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 2px groove rgba(0, 0, 0, 0.207);
+  box-shadow: 0 0 3em -1em #000000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em;
+  transition: all 0.2s ease-in;
+  border-radius: 0.25em;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  margin: 0 auto;
+  padding: 1rem;
+  justify-content: stretch;
+  gap: 1rem;
+  align-items: stretch;
+  width: 100vh;
+  height: 98vh;
+  outline: 1vh solid black;
+  background-image: linear-gradient(to bottom right, rgb(145, 40, 138), yellow);
+  overflow: hidden;
+  border-radius: 0.25em;
+}
+
+.numbers {
+  background-color: #83818196;
+}
+
+.numbers:hover, .numbers.active {
+  transform: scale(0.9);
+  background-color: gray;
+}
+
+.operator {
+  background-color: #00000096;
+}
+
+#delete,
+#gleich,
+#backspace {
+  background-color: #000000;
+  align-items: center;
+  border: 2px solid whitesmoke;
+}
+
+#gleich {
+  grid-row: span 2;
+}
+
+#gleich:hover, #gleich.active,
+#delete:hover, #delete.active,
+#backspace:hover, #backspace.active  {
+  transform: scale(0.9);
+  box-shadow: 0 0 40px rgb(145, 40, 138);
+}
+
+#ergebnis {
+  grid-column: 1/7;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  min-height: 100px;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-radius: 0.25em;
+  transition: all 0.2s ease-in;
+  border: 10px groove gray;
+  overflow: auto;
+}
+
+#prozent,
+#quadrat,
+#wurzel {
+  background-color: #00000096;
+}
+
+
+.operator:hover, .operator.active,
+#prozent:hover, 
+#quadrat:hover,
+#wurzel:hover {
+  transform: scale(0.9);
+  background-color: #000000;
+}
+
+#quadrat {
+  position: relative;
+}
+
+#quadrat span {
+  position: absolute;
+  left: calc(50% - 1rem);
+  top: calc(50% - 1.5rem);
+}

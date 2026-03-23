@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="start">
+        <h1>Starte die Liste mit einem einzigen Klick!</h1>
+        <h2>Schreibe deine Aktivitäten in das Eingabefeld und bestätige sie mit der Eingabetaste.</h2>
+        <div style="display: none;" id="list-template">
+          <li>
+            <div class="content">
+              <span style="display: none;"></span>
+              <input />
+            </div>
+            <button class="del">❌</button>
+            <button class="edit">🖊️</button>
+            <button class="done">✔️</button>
+          </li>
+        </div>
+        <div class="card">
+          <button id="add">Hinzufügen</button>
+          <ul id="list"></ul>
+        </div>
+      </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
